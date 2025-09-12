@@ -1,0 +1,12 @@
+---
+title: "The ReSWARM Microgravity Flight Experiments: Planning, Control, and Model Estimation for On-Orbit Close Proximity Operations"
+authors: "Bryce Doerr and Keenan Albee and Monica Ekal, et al."
+journal: "Journal of Field Robotics"
+year: 2024
+collection: publications
+image: "/assets/images/publications/2024_jfr.png"
+# below are used if they exist
+code: "https://github.com/albee/trace"
+link: "https://doi.org/10.1002/rob.22308"
+doi: "10.1002/rob.22308"
+---

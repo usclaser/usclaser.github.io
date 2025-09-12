@@ -1,0 +1,12 @@
+---
+title: "The RATTLE Motion Planning Algorithm for Robust Online Parametric Model Improvement with On-Orbit Validation"
+authors: "Keenan Albee and Monica Ekal, et al."
+journal: "Robotics and Automation, Letters"
+year: 2022
+collection: publications
+image: "/assets/images/publications/2022_ral.png"
+# below are used if they exist
+code: "https://github.com/albee/rattle-iros-2022"
+link: "https://doi.org/10.1109/lra.2022.3196957"
+doi: "10.1109/lra.2022.3196957"
+---

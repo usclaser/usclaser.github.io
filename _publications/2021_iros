@@ -1,0 +1,12 @@
+---
+title: "Online Information-Aware Motion Planning with Inertial Parameter Learning for Robotic Free-Flyers"
+authors: "Monica Ekal and Keenan Albee, et al."
+journal: "IROS"
+year: 2021
+collection: publications
+image: "/assets/images/publications/2021_iros.png"
+# below are used if they exist
+code: 
+link: "https://doi.org/10.1109/iros51168.2021.9636325"
+doi: "10.1109/iros51168.2021.9636325"
+---

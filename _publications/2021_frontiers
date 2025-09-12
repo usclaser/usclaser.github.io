@@ -1,0 +1,12 @@
+---
+title: "A Robust Observation, Planning, and Control Pipeline for Autonomous Rendezvous with Tumbling Targets"
+authors: "Keenan Albee and Charles Oestreich, et al."
+journal: "Frontiers in Robotics and AI"
+year: 2021
+collection: publications
+image: "/assets/images/publications/2021_frontiers.png"
+# below are used if they exist
+code: 
+link: "https://doi.org/10.3389/frobt.2021.641338"
+doi: "10.3389/frobt.2021.641338"
+---

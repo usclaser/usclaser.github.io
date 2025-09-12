@@ -1,0 +1,12 @@
+---
+title: "Lunar Leader: Persistent, Optimal Leader Election for Multi-Agent Exploration Teams"
+authors: "Keenan Albee, et al."
+journal: "MASSPACE @ AAMAS"
+year: 2024
+collection: publications
+image: "/assets/images/publications/2024_aamas.png"
+# below are used if they exist
+code: 
+link: "https://mas-space.github.io/aamas2024ws/pdfs/masspace2024-3.pdf"
+doi:
+---

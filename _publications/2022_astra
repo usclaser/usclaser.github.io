@@ -1,0 +1,11 @@
+---
+title: "Autonomous Rendezvous with an Uncertain, Uncooperative Tumbling Target: The TumbleDock Flight Experiments"
+authors: "Keenan Albee, et al."
+journal: "ESA ASTRA"
+year: 2022
+collection: publications
+image: "/assets/images/publications/2022_esa_astra.png"
+# below are used if they exist
+code: "https://github.com/albee/trace"
+link: "https://elib.dlr.de/189550/"
+---

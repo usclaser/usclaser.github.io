@@ -1,0 +1,31 @@
+include: ["_pages"]
+
+title: Keenan Albee
+email: test@test.com
+desicption: test
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://albee.github.io"
+
+# Build settings
+baseurl: ""
+plugins:
+  - jekyll-feed
+
+masthead_title: "Keenan Albee"
+
+sass:
+  load_paths:
+    - node_modules
+
+defaults:
+    values:
+      custom_stylesheet: assets/css/custom.css
+
+# might consider adding a posts option here in the future
+collections:
+  publications:
+    source: _publications
+    output: true
+    permalink: /publications/:title/
+    sort_by: "year"
+    order: "descending"

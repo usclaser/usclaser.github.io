@@ -1,0 +1,12 @@
+---
+title: "On-Orbit Inspection of an Unknown, Tumbling Target using NASA’s Astrobee Robotic Free-Flyers"
+authors: "Charles Oestreich, Antonio Teran, Jessica Todd, Keenan Albee, Richard Linares"
+journal: "CVPR"
+year: 2021
+collection: publications
+image: "/assets/images/publications/2021_cvpr.png"
+# below are used if they exist
+code: 
+link: "https://doi.org/10.1109/cvprw53098.2021.00232"
+doi: "10.1109/cvprw53098.2021.00232"
+---
