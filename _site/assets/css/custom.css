@@ -35,3 +35,33 @@
   max-width: 100%;     /* Ensure the image does not exceed the width of its container */
   height: auto;        /* Maintain the aspect ratio */
 }
+
+/* Navbar speed and fixed height (no size change on hover) */
+.navbar {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  transition: all 120ms ease-in;
+}
+.navbar .nav-link {
+  transition: color 120ms ease-in, background-color 120ms ease-in;
+}
+.navbar .nav-link.active {
+  font-weight: 600;
+}
+
+/* Normalize left margin/gutter across pages */
+.page-content-row > [class^='col-'] {
+  padding-left: calc(var(--bs-gutter-x) * .5);
+}
+
+/* Carousel sizing and centering */
+.fixed-carousel-height {
+  height: 420px;
+}
+.carousel-image-wrapper {
+  height: 420px;
+}
+.carousel-image-wrapper img {
+  max-height: 100%;
+  object-fit: contain;
+}

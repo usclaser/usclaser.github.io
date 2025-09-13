@@ -1,17 +1,18 @@
 include: ["_pages"]
 
-title: Keenan Albee
-email: test@test.com
-desicption: test
+title: Laboratory for Autonomous Systems in Exploration and Robotics (LASER)
+email: kalbee@usc.edu
+desicption: USC LASER Lab website
+description: USC LASER Lab website
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://albee.github.io"
+url: "https://usclaser.github.io"
 
 # Build settings
 baseurl: ""
 plugins:
   - jekyll-feed
 
-masthead_title: "Keenan Albee"
+masthead_title: "USC LASER Lab"
 
 sass:
   load_paths:
@@ -21,7 +22,7 @@ defaults:
     values:
       custom_stylesheet: assets/css/custom.css
 
-# might consider adding a posts option here in the future
+# Collections
 collections:
   publications:
     source: _publications
@@ -29,3 +30,5 @@ collections:
     permalink: /publications/:title/
     sort_by: "year"
     order: "descending"
+  people:
+    output: false

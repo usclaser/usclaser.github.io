@@ -42,7 +42,7 @@
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link " href="/">Home</a></li>
             <li class="nav-item"><a class="nav-link " href="/people/">People</a></li>
-            <li class="nav-item"><a class="nav-link " href="/research/">Research</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/research/">Research</a></li>
             <li class="nav-item"><a class="nav-link " href="/publications/">Publications</a></li>
             <li class="nav-item"><a class="nav-link " href="/contact/">Contact</a></li>
           </ul>
@@ -66,25 +66,70 @@
     <!-- Main content -->
     <main class="container my-4 flex-grow-1">
       <div class="row page-content-row">
-        <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+        <div class="col-12 col-lg-10">
+  <h2>Research Themes</h2>
+  
+  <div class="row justify-content-center">
+	<div class="col-12 col-md-9 py-2 research">
+		<h3>Research</h3>
 
-<div class="container">
-  <h1>404</h1>
+		<p>We study how robots reason about <b>uncertainty</b> in their environment, including <b>inaccurate models</b>, uncertain <b>state estimates</b>, and the actions of <b>other agents</b>.</p>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+		<p>Our work draws on <b>nonlinear control</b>, <b>Bayesian estimation</b>, and modern, learning-based <b>computer vision</b> to enable robots to assess risk online and adapt plans accordingly. Applications include <b>manipulation</b>, <b>locomotion</b>, and <b>space robotics</b>, where robustness is a key barrier to field deployment.</p>
+	</div>
+</div>
+
+
+  <h3 class="mt-4">Current Projects</h3>
+  <ul>
+    <li>Risk-aware motion planning and control under uncertainty</li>
+    <li>Perception-informed planning for extreme environments</li>
+    <li>Multi-robot autonomy for space and field robotics</li>
+  </ul>
+
+  <div class="row pt-2">
+    
+    
+      <div class="row">
+        <hr />
+      </div>
+      <div class="row justify-content-center py-3" id="rattle">
+        <div class="col-8 col-md-4 align-items-center my-auto py-3">
+          <img class="img-fluid" src="/assets/images/publications/2022_ral.png" alt="Robust model improvement for on-orbit robots (RATTLE)" />
+        </div>
+        <div class="col-10 col-md-8 my-auto">
+          <p><b>Robust model improvement for on-orbit robots (RATTLE)</b></p>
+          <p>RATTLE develops a motion planning algorithm that improves parametric models online, using real robot data to reduce uncertainty and increase robustness during close-proximity operations.</p>
+        </div>
+      </div>
+    
+      <div class="row">
+        <hr />
+      </div>
+      <div class="row justify-content-center py-3" id="lunar-leader">
+        <div class="col-8 col-md-4 align-items-center my-auto py-3">
+          <img class="img-fluid" src="/assets/images/publications/2024_aamas.png" alt="Persistent leader election for multi-robot exploration (Lunar Leader)" />
+        </div>
+        <div class="col-10 col-md-8 my-auto">
+          <p><b>Persistent leader election for multi-robot exploration (Lunar Leader)</b></p>
+          <p>A distributed algorithm for electing a leader that persists under communication dropouts and dynamics, enabling coordinated behaviors in challenging environments.</p>
+        </div>
+      </div>
+    
+      <div class="row">
+        <hr />
+      </div>
+      <div class="row justify-content-center py-3" id="microgravity-cd">
+        <div class="col-8 col-md-4 align-items-center my-auto py-3">
+          <img class="img-fluid" src="/assets/images/publications/2024_acta.png" alt="Change detection in microgravity (AstrobeeCD)" />
+        </div>
+        <div class="col-10 col-md-8 my-auto">
+          <p><b>Change detection in microgravity (AstrobeeCD)</b></p>
+          <p>Perception-informed autonomy to detect environmental changes for free-flying robots, enabling safer and more reliable task execution on-orbit.</p>
+        </div>
+      </div>
+    
+  </div>
 </div>
 
       </div>

@@ -1,6 +1,6 @@
-# albee-research-site
+# usclaser.github.io
 
-This is a Jekyll-based static site for my research work!
+Jekyll site for the Laboratory for Autonomous Systems in Exploration and Robotics (LASER) at USC Viterbi.
 
 ## Details
 
@@ -9,15 +9,14 @@ This is a Jekyll-based static site for my research work!
 
 ## Local Deployment
 
-You'll need to install bootstrap locally, `npm init -y && npm install bootstrap`.
+Optional: install Bootstrap locally for development assets `npm init -y && npm install bootstrap`.
 
-For serving content on localhost during development:
+To serve locally with Jekyll:
 
 ```bash
-cd docs
+bundle install
 bundle exec jekyll serve
-
-# navigate to http://localhost:4000
+# then open http://localhost:4000
 ```
 
 For github pages deployment, see `.github/workflows/jekyll.yml`
@@ -27,10 +26,14 @@ For github pages deployment, see `.github/workflows/jekyll.yml`
 For anyone happening on this page, I highly recommend [this blog post](https://geekdude.github.io/tech/new-website/) for resources on
 how to work with Jekyll/Github Pages.
 
-## Usage
+## Information architecture
 
-- `*.md` pages support markdown using markdownify.
-- `publications.md` supports upload of citations following the format in `_publications/`
-  - [ ] TODO: this might be cleaner to pull directly from a `.bib`
-- new images and other assets should be stored in `assets/`
-- special javascript for website features (like swapping content) should be stored in `assets/js/`
+- Home: overview, recent news, selected publications
+- People: lab members and alumni
+- Research: themes and current projects
+- Publications: full list from `_publications/`
+- News: announcements
+- Join: recruiting info and how to apply
+- Contact: email and links
+
+Assets live under `assets/`. Site-wide includes in `_includes/`. Layouts in `_layouts/`. Publications live in `_publications/` as Markdown files with front matter.
