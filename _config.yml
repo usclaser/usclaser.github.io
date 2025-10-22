@@ -1,9 +1,9 @@
 include: ["_pages"]
 
-title: Laboratory for Autonomous Systems in Exploration and Robotics (LASER)
+title: LASER
 email: kalbee@usc.edu
-desicption: USC LASER Lab website
-description: USC LASER Lab website
+desicption: USC LASER website
+description: USC LASER website
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://usclaser.github.io"
 
@@ -12,7 +12,7 @@ baseurl: ""
 plugins:
   - jekyll-feed
 
-masthead_title: "USC LASER Lab"
+masthead_title: "USC LASER"
 
 sass:
   load_paths:
@@ -31,4 +31,8 @@ collections:
     sort_by: "year"
     order: "descending"
   people:
-    output: false
+    source: _people
+    output: true
+  robots:
+    source: _robots
+    output: true

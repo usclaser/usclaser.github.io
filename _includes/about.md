@@ -27,5 +27,5 @@ I'm an avid backpacker, skier, and gravel biker/bikepacker. I also scuba dive an
 
 ---
 
-[^1]: Acknowledgment to my many collaborators here including but not limited to: Abhishek Cauligi, Brian Coltin, Monica Ekal, Federico Rossi, Sriramya Bhamidipati, Caroline Specht, Roberto Lampariello, and others.
+[^1]: Acknowledgment to many collaborators here including but not limited to: Abhishek Cauligi, Brian Coltin, Monica Ekal, Federico Rossi, Sriramya Bhamidipati, Caroline Specht, Roberto Lampariello, and others.
 [^2]: [Here](https://github.com/nasa/astrobee?tab=readme-ov-file#documentation) is my flight software guide for autonomy researchers using Astrobee, a fantastic research platform developed by NASA Ames' Intelligent Robotics Group.

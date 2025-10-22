@@ -1,4 +1,45 @@
-/* Flex container for each publication item */
+/* Fix navbar/scroll issues and offset content under fixed-top navbar */
+html, body {
+  height: auto !important;
+  overflow-y: auto !important;
+}
+
+:root { --nav-offset: 96px; }
+@media (min-width: 992px) {
+  :root { --nav-offset: 108px; }
+}
+body { padding-top: var(--nav-offset); }
+.navbar .navbar-collapse { max-height: calc(100vh - var(--nav-offset)); }
+
+
+.navbar {
+  min-height: 72px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  transition: all 120ms ease-in;
+  background-color: #ffcc00ff !important;
+}
+.navbar-nav { gap: 1rem; }
+
+
+@media (min-width: 992px) {
+  .navbar-brand-logo {
+    min-height: 56px;
+    max-height: 64px;
+  }
+}
+
+/* Ensure dual brand logos align nicely */
+.navbar .navbar-brand .navbar-brand-logo { vertical-align: middle; }
+.navbar .navbar-brand .navbar-brand-logo.me-2 { margin-right: .5rem; }
+
+/* Ensure USC logo sits flush on the far right */
+.navbar .navbar-usc { margin-left: auto; display: inline-flex; align-items: center; }
+.navbar .navbar-usc img { height: 36px; width: auto; }
+@media (min-width: 992px) {
+  .navbar .navbar-usc img { height: 40px; }
+}
+
 .publication-content {
   display: flex;                /* Enable flexbox layout */
   align-items: flex-start;     /* Align items at the top */
@@ -36,19 +77,6 @@
   height: auto;        /* Maintain the aspect ratio */
 }
 
-/* Navbar speed and fixed height (no size change on hover) */
-.navbar {
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
-  transition: all 120ms ease-in;
-}
-.navbar .nav-link {
-  transition: color 120ms ease-in, background-color 120ms ease-in;
-}
-.navbar .nav-link.active {
-  font-weight: 600;
-}
-
 /* Normalize left margin/gutter across pages */
 .page-content-row > [class^='col-'] {
   padding-left: calc(var(--bs-gutter-x) * .5);
@@ -65,3 +93,145 @@
   max-height: 100%;
   object-fit: contain;
 }
+
+/* Styles for Robots page grid */
+.robot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.robot-item {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f6f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.robot-item img {
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Robot cards */
+.robot-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Homepage hero background support */
+.site-hero {
+  min-height: 320px;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.site-hero .container { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+
+/* Hero area: no background, two-column layout with text on right */
+.site-hero { background: none !important; }
+.site-hero .row { align-items: center; }
+.site-hero .hero-figure { display: block; /* left column (image/carousel) */ }
+.site-hero .hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.site-hero .hero-text h1 { margin: 0; }
+.site-hero .hero-text .sub-link { font-weight: 500; }
+
+/* Hero sub-link: underline only under text (no overflow) */
+.site-hero .hero-text .sub-link {
+  display: inline;
+  position: relative;
+  text-decoration: underline;
+  text-decoration-color: var(--bs-link-color, currentColor);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+.site-hero .hero-text .sub-link::after { content: none !important; }
+
+/* Carousel overlays: light image veil, dark buttons, dark caption */
+.carousel-image-wrapper { position: relative; }
+.carousel-image-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15); /* light opacity over images */
+  pointer-events: none;
+}
+/* Darken carousel controls */
+.carousel-control-prev, .carousel-control-next {
+  background: rgba(0, 0, 0, 0.35);
+  width: 3rem; height: 3rem;
+  border-radius: 50%;
+  top: 50%; transform: translateY(-50%);
+  opacity: 1;
+}
+.carousel-control-prev:hover, .carousel-control-next:hover { background: rgba(0, 0, 0, 0.5); }
+.carousel-control-prev-icon, .carousel-control-next-icon { filter: invert(1); opacity: 0.9; }
+/* Caption background */
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: .5rem;
+  padding: .75rem 1rem;
+}
+
+/* Subtle darkened background for the main Home section */
+.section-veil {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0 !important;
+  border-radius: 8px;
+}
+@media (min-width: 768px) {
+  .section-veil { padding: 0 !important; }
+}
+
+/* Remove padding for veil/carousel and make carousel span full column width */
+.carousel-section { padding: 0 !important; }
+.carousel-inner, .carousel-image-wrapper { width: 100%; }
+
+/* Faster hover transitions for hyperlinks sitewide (including footer) */
+a { transition: color 60ms ease-in, text-decoration-color 60ms ease-in, background-color 60ms ease-in; }
+footer a, .site-footer a { transition: color 60ms ease-in, text-decoration-color 60ms ease-in, background-color 60ms ease-in; }
+
+/* Full-bleed band with navbar color */
+.full-bleed-band {
+  background: #ffcc00ff;
+  color: #212529;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  padding: 2rem 0;
+}
+
+/* Publications page: force-remove all link underlines/effects */
+.publications-page a,
+.publications-page a:hover,
+.publications-page a:focus,
+.publications-page a:active,
+.publications-page h4 a {
+  text-decoration: none !important;
+  border-bottom: 0 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+.publications-page a::after,
+.publications-page h4 a::after { display: none !important; content: none !important; }

@@ -4,15 +4,13 @@ permalink: /join/
 title: Join
 ---
 
-<div class="col-12 col-lg-9">
-  <h2>Join LASER</h2>
-  {% capture md %}{% include laser.md %}{% endcapture %}
-  {{ md | markdownify }}
+## Join LASER
 
-  <h3>Prospective Students</h3>
-  <ul>
-    <li>Ph.D.: Apply to USC Viterbi (AME/CS) and mention LASER in your statement.</li>
-    <li>MS research: Email your CV and interests to {{ site.email }} with subject <code>[LASER-APPLY]</code>.</li>
-    <li>Undergraduates at USC: Reach out about directed research opportunities.</li>
-  </ul>
-</div>
+We are currently recruiting Ph.D. students for fall 2026, and a limited number of research-based M.S. students on a rolling basis. Motivated students with backgrounds in robotics, aerospace/mechanical engineering, computer science, controls, and related fields are encouraged to apply. Please indicate your interest on your application materials to USC Viterbi. You can also email me directly with your CV at `kalbee@usc.edu` with subject line `[LASER-APPLY]`
+
+(*Note: Due to the volume of mail I am unfortunately unable to respond to all application-related emails individually.)*
+
+### Prospective Students
+- Ph.D.: Apply to USC Viterbi (AME/CS) and mention LASER in your statement.
+- MS research: Email your CV and interests to {{ site.email }} with subject <code>[LASER-APPLY]</code>.
+- Undergraduates at USC: Reach out about directed research opportunities.

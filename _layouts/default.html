@@ -5,36 +5,69 @@
   </head>
   <body class="fun-gradient d-flex flex-column min-vh-100">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="{{ '/' | relative_url }}">{{ site.masthead_title | default: site.title }}</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="{{ '/' | relative_url }}" aria-label="Home">
+          <img src="{{ '/assets/images/home.png' | relative_url }}" alt="Home" class="navbar-brand-logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Home</a></li>
-            <li class="nav-item"><a class="nav-link {% if page.url == '/people/' %}active{% endif %}" href="{{ '/people/' | relative_url }}">People</a></li>
-            <li class="nav-item"><a class="nav-link {% if page.url == '/research/' %}active{% endif %}" href="{{ '/research/' | relative_url }}">Research</a></li>
-            <li class="nav-item"><a class="nav-link {% if page.url == '/publications/' %}active{% endif %}" href="{{ '/publications/' | relative_url }}">Publications</a></li>
-            <li class="nav-item"><a class="nav-link {% if page.url == '/contact/' %}active{% endif %}" href="{{ '/contact/' | relative_url }}">Contact</a></li>
+
+        <div class="collapse navbar-collapse" id="navContent">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link {% if page.url contains '/people/' %}active{% endif %}" href="{{ '/people/' | relative_url }}"><span class="nav-text">People</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if page.url contains '/research/' %}active{% endif %}" href="{{ '/research/' | relative_url }}"><span class="nav-text">Research</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if page.url contains '/publications/' %}active{% endif %}" href="{{ '/publications/' | relative_url }}"><span class="nav-text">Publications</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if page.url contains '/robots/' %}active{% endif %}" href="{{ '/robots/' | relative_url }}"><span class="nav-text">Robots</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if page.url contains '/join/' %}active{% endif %}" href="{{ '/join/' | relative_url }}"><span class="nav-text">Join</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-0 navbar-usc" href="https://www.usc.edu" target="_blank" rel="noopener" aria-label="USC">
+                <img src="{{ '/assets/images/USC-Logo.png' | relative_url }}" alt="USC" class="navbar-brand-logo" />
+              </a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
     <!-- Hero/Header -->
-    <header class="bg-white py-5">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-12 col-lg-8">
-            <h1 class="inter-banner">{{ site.title }}</h1>
-            <p class="lead mb-0">Autonomy for robots in extreme and unstructured environments.</p>
-            <p class="mb-0"><a href="https://viterbi.usc.edu" target="_blank">USC Viterbi School of Engineering</a></p>
+    {% comment %} Homepage-only masthead with optional background image set via front matter {% endcomment %}
+    {% if page.url == '/' %}
+      {% assign hero_bg = nil %}
+      <header class="site-hero">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-6 hero-figure">
+              <h1 class="inter-banner">
+                <img
+                src="{{ '/assets/images/laser_circle.png' | relative_url }}"
+                alt="{{ site.title }}"
+                class="img-fluid"
+                style="max-height: clamp(100px, 250px, 300px); width: auto;"
+                />
+              </h1>
+            </div>
+            <div class="col-12 col-lg-6 hero-text">
+              {% assign laser_page = site.pages | where_exp: 'p', 'p.path contains "_pages/laser.md"' | first %}
+              {% if laser_page %}
+                {{ laser_page.content | markdownify }}
+              {% endif %}
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+    {% endif %}
 
     <!-- Main content -->
     <main class="container my-4 flex-grow-1">

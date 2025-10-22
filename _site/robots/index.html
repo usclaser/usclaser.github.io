@@ -52,13 +52,13 @@
               <a class="nav-link " href="/people/"><span class="nav-text">People</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="/research/"><span class="nav-text">Research</span></a>
+              <a class="nav-link " href="/research/"><span class="nav-text">Research</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link " href="/publications/"><span class="nav-text">Publications</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="/robots/"><span class="nav-text">Robots</span></a>
+              <a class="nav-link active" href="/robots/"><span class="nav-text">Robots</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link " href="/join/"><span class="nav-text">Join</span></a>
@@ -80,59 +80,36 @@
     <!-- Main content -->
     <main class="container my-4 flex-grow-1">
       <div class="row page-content-row">
-        <h2 id="research">Research</h2>
-
-<p>Increasingly capable algorithms are required to continue taking dynamic mobile robots out of the lab and into the field. Operating under challenging conditions with real-world constraints, these robots face situations that are <strong>uncertain</strong>, <strong>unknown</strong>, or <strong>unstructured</strong> with limitations in perception, real-time demands on compute, and often with complex or stochastic dynamics.</p>
-
-<p>LASER develops methods for adaptive decision-making under uncertainty for these systems, drawing from <em>control theory</em>, <em>reinforcement learning</em>, and <em>stochastic modeling</em>, with an emphasis on a “theory to practice” philosophy including field hardware validation: our work has flown on the International Space Station and, in the coming months, to the Moon. Our overarching goal is to make autonomous robotic operations safer and more efficient when human-in-the-loop operation becomes infeasible, risky, or wasteful. To this end, some of our current research areas include:</p>
-
-<ul>
-  <li>Infusing learning-based tools into planning and control to improve efficiency and safety under imperfect knowledge.</li>
-  <li>Providing or enhancing safety guarantees for uncertain dynamical systems, including when new information is revealed online.</li>
-  <li>Considering perception, localization, and information gain explicitly in robotic planning.</li>
-  <li>Autonomy frameworks incorporating the above for exploration, space, and other extreme environment robotics applications.
-<!-- Display projects--></li>
-</ul>
-<div class="row pt-2">
+        <div class="col-12 col-lg-10 mx-auto">
+  <h2>Robots</h2>
   
   
-    <div class="row">
-      <hr />
-    </div>
-    <div class="row justify-content-center py-3" id="rattle">
-      <div class="col-8 col-md-4 align-items-center my-auto py-3">
-        <img class="img-fluid" src="/assets/images/publications/2022_ral.png" alt="Robust model improvement for on-orbit robots (RATTLE)" />
-      </div>
-      <div class="col-10 col-md-8 my-auto">
-        <p><b>Robust model improvement for on-orbit robots (RATTLE)</b></p>
-        <p>RATTLE develops a motion planning algorithm that improves parametric models online, using real robot data to reduce uncertainty and increase robustness during close-proximity operations.</p>
-      </div>
-    </div>
-  
-    <div class="row">
-      <hr />
-    </div>
-    <div class="row justify-content-center py-3" id="lunar-leader">
-      <div class="col-8 col-md-4 align-items-center my-auto py-3">
-        <img class="img-fluid" src="/assets/images/publications/2024_aamas.png" alt="Persistent leader election for multi-robot exploration (Lunar Leader)" />
-      </div>
-      <div class="col-10 col-md-8 my-auto">
-        <p><b>Persistent leader election for multi-robot exploration (Lunar Leader)</b></p>
-        <p>A distributed algorithm for electing a leader that persists under communication dropouts and dynamics, enabling coordinated behaviors in challenging environments.</p>
-      </div>
-    </div>
-  
-    <div class="row">
-      <hr />
-    </div>
-    <div class="row justify-content-center py-3" id="microgravity-cd">
-      <div class="col-8 col-md-4 align-items-center my-auto py-3">
-        <img class="img-fluid" src="/assets/images/publications/2024_acta.png" alt="Change detection in microgravity (AstrobeeCD)" />
-      </div>
-      <div class="col-10 col-md-8 my-auto">
-        <p><b>Change detection in microgravity (AstrobeeCD)</b></p>
-        <p>Perception-informed autonomy to detect environmental changes for free-flying robots, enabling safer and more reliable task execution on-orbit.</p>
-      </div>
+    <div class="row g-4 mt-2 justify-content-center">
+      
+        <div class="col-12 col-sm-6">
+          <div class="card h-100 robot-card">
+            
+            <img class="card-img-top" src="/assets/images/robots/laser_r.png" alt="Astrobee" />
+            <div class="card-body">
+              <h5 class="card-title">Astrobee</h5>
+              <p class="card-text"><p>Short description of the Astrobee free-flying robot.</p>
+</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-12 col-sm-6">
+          <div class="card h-100 robot-card">
+            
+            <img class="card-img-top" src="/assets/images/robots/laser_r.png" alt="Astrobee" />
+            <div class="card-body">
+              <h5 class="card-title">Astrobee</h5>
+              <p class="card-text"><p>Short description of the Astrobee free-flying robot.</p>
+</p>
+            </div>
+          </div>
+        </div>
+      
     </div>
   
 </div>

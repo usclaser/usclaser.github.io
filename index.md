@@ -3,12 +3,13 @@ title: "Home"
 layout: default
 classes: wide
 permalink: "/"
+hero_image: /assets/images/splash.png
 ---
 
-<div class="col-12 col-lg-10">
+<div class="col-12 col-lg-10 mx-auto">
         <div class="row my-4">
-            <div class="col-12">
-                        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
+            <div class="col-12 section-veil">
+                        <div id="projectCarousel" class="carousel slide mx-auto" data-bs-ride="carousel" data-bs-interval="8000">
                             <div class="carousel-indicators">
                                 {% assign research_page = site.pages | where: 'title', 'Research' | first %}
                                 {% assign projs = research_page.projects %}
@@ -38,18 +39,29 @@ permalink: "/"
                     </button>
                 </div>
             </div>
-        </div>
+        </div>  
+</div>
 
-        <div class="row g-4">
-            <div class="col-12">
-                <h2>About the Lab</h2>
-                {% capture md %}{% include laser.md %}{% endcapture %}
-                {{ md | markdownify }}
-                <p class="mt-3">
-                    Explore our <a href="{{ '/research/' | relative_url }}">research</a> and <a href="{{ '/publications/' | relative_url }}">publications</a>, meet the <a href="{{ '/people/' | relative_url }}">team</a>.
-                </p>
+<div class="row mt-5">
+  <div class="col-12 p-0">
+    <section class="full-bleed-band">
+      <div class="container">
+        <div class="row align-items-start g-4">
+          <div class="col-12 col-lg-6">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+            <p>USC Viterbi School of Engineering, Los Angeles, CA</p>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.google.com/maps?q=USC%20Viterbi%20School%20of%20Engineering&output=embed"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+          </div>
         </div>
-
-  
+      </div>
+    </section>
+  </div>
 </div>
