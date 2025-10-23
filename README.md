@@ -28,12 +28,4 @@ how to work with Jekyll/Github Pages.
 
 ## Information architecture
 
-- Home: overview, recent news, selected publications
-- People: lab members and alumni
-- Research: themes and current projects
-- Publications: full list from `_publications/`
-- News: announcements
-- Join: recruiting info and how to apply
-- Contact: email and links
-
-Assets live under `assets/`. Site-wide includes in `_includes/`. Layouts in `_layouts/`. Publications live in `_publications/` as Markdown files with front matter.
+Assets live under `assets/`. Site-wide includes in `_includes/`. Layouts in `_layouts/`. All pages in `_pages/`. Publications/robots/people/etc. live in `_*/` as Markdown files with info.

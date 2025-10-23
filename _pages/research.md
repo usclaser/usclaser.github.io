@@ -40,7 +40,7 @@ LASER develops methods for adaptive decision-making under uncertainty for these 
     <div class="row justify-content-center py-3" id="{{ p.slug }}">
       <div class="col-8 col-md-4 align-items-center my-auto py-3">
         {% if p.video %}
-          <video style="width:100%; height:auto; display:block;" controls preload="metadata" playsinline poster="{{ p.image | relative_url }}">
+          <video style="width:100%; height:240px; display:block; object-fit:cover;" controls preload="metadata" playsinline poster="{{ p.image | relative_url }}">
             <source src="{{ p.video | relative_url }}" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -48,7 +48,7 @@ LASER develops methods for adaptive decision-making under uncertainty for these 
             Having trouble? <a href="{{ p.video | relative_url }}" target="_blank" rel="noopener">Open video in a new tab</a>
           </p>
         {% else %}
-          <img class="img-fluid" src="{{ p.image | relative_url }}" alt="{{ p.title }}" />
+          <img class="img-fluid" style="width:100%; height:240px; object-fit:cover; object-position:center;" src="{{ p.image | relative_url }}" alt="{{ p.title }}" />
         {% endif %}
       </div>
       <div class="col-10 col-md-8 my-auto">

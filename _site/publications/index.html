@@ -34,11 +34,99 @@
   :root { --hero-splash-bg: #ffffff; }
 </style>
 
+    <style>
+      /* Responsive navbar/logo adjustments */
+      :root { --nav-h: 56px; --usc-left: 80px; }
+      body { padding-top: var(--nav-h, 56px); }
+
+      .navbar-brand-logo { height: 1.5rem; width: auto; }
+      .navbar.navbar-light { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+
+      /* Keep collapsed menu within viewport and scrollable */
+      .navbar-collapse {
+        max-height: calc(100vh - var(--nav-h, 56px));
+        overflow-y: auto;
+        overscroll-behavior: contain;
+      }
+
+      @media (max-width: 575.98px) {
+        /* Hide fixed USC logo on extra-small screens */
+        .navbar-usc { display: none; }
+
+        /* Tighter navbar and controls */
+        .navbar.navbar-light { padding-top: 0.125rem; padding-bottom: 0.125rem; }
+        .navbar .navbar-brand { margin-right: 0.25rem; }
+        .navbar .navbar-toggler { padding: 0.2rem 0.4rem; }
+        .navbar .navbar-toggler-icon { width: 1.25em; height: 1.25em; }
+
+        /* Smaller brand and link text */
+        .navbar-brand-logo { height: 1rem; }
+        .navbar .nav-link { padding: 0.2rem 0.4rem; font-size: 0.9rem; }
+        .navbar .nav-link img { height: 1.25em; width: auto; }
+
+        /* Prevent collapsed menu from overtaking the viewport (reinforced for XS) */
+        .navbar-collapse {
+          max-height: calc(100vh - var(--nav-h, 56px));
+          overflow-y: auto;
+        }
+      }
+
+      /* Mobile overrides: hide fixed USC logo and shrink navbar/icons for collapsed widths */
+      @media (max-width: 991.98px) {
+        .navbar-usc { display: none !important; }
+        .navbar.navbar-light { padding-top: 0.125rem; padding-bottom: 0.125rem; }
+        .navbar .navbar-brand { margin-right: 0.25rem; }
+        .navbar .navbar-toggler { padding: 0.2rem 0.35rem; }
+        .navbar .navbar-toggler-icon { width: 1.1em; height: 1.1em; }
+        .navbar-brand-logo { height: 0.9rem; }
+        .navbar .nav-link { padding: 0.2rem 0.35rem; font-size: 0.9rem; line-height: 1.2; }
+        .navbar .nav-link img { height: 1.1em !important; width: auto; }
+        .navbar-collapse { max-height: calc(100vh - var(--nav-h, 56px)); overflow-y: auto; overscroll-behavior: contain; }
+      }
+
+      /* Mobile sizing fixes for brand and nav links */
+      @media (max-width: 991.98px) {
+        .navbar .navbar-brand {
+          padding: 0.25rem 0.35rem;
+          min-height: 44px; /* adequate tap target */
+          display: flex;
+          align-items: center;
+        }
+        .navbar-brand-logo {
+          height: clamp(2rem, 10vw, 2rem); /* scale Home icon with viewport */
+        }
+        .navbar .nav-link {
+          font-size: clamp(1.2rem, 3.6vw, 1.4rem); /* larger, responsive text */
+          padding: 0.45rem 0.6rem; /* bigger tap area */
+          min-height: 44px;
+          display: flex;
+          align-items: center;
+        }
+        .navbar .nav-link img { height: 1.2em; }
+      }
+
+      /* Align Home icon next to USC logo (no animation) */
+      .navbar .navbar-brand {
+        margin-left: 0;
+        transition: none !important;
+      }
+
+      /* On desktop, offset Home icon to clear USC logo (no JS) */
+      @media (min-width: 992px) {
+        .navbar .navbar-brand { margin-left: var(--usc-left, 180px); }
+      }
+    </style>
   </head>
   <body class="fun-gradient d-flex flex-column min-vh-100">
+    <!-- USC fixed logo at far left -->
+    <a class="navbar-usc" href="https://www.usc.edu" target="_blank" rel="noopener" aria-label="USC" style="position: fixed; left: 0; top: 0; height: var(--nav-h, 56px); z-index: 1040; padding-left: 8px; display: flex; align-items: center;">
+      <img src="/assets/images/USC-Logo.png" alt="USC" style="height: calc(var(--nav-h, 56px) * 0.8); max-height: calc(var(--nav-h, 56px) * 0.8); width: auto;" />
+    </a>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container">
+        <!-- Removed USC brand from navbar; Home remains -->
         <a class="navbar-brand" href="/" aria-label="Home">
           <img src="/assets/images/home.png" alt="Home" class="navbar-brand-logo" />
         </a>
@@ -64,8 +152,8 @@
               <a class="nav-link " href="/join/"><span class="nav-text">Join</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link p-0 navbar-usc" href="https://www.usc.edu" target="_blank" rel="noopener" aria-label="USC">
-                <img src="/assets/images/USC-Logo.png" alt="USC" class="navbar-brand-logo" />
+              <a class="nav-link d-flex align-items-center" href="https://www.notion.so/LASER-253403427dee80c7b02bd0ff5ceca45f" aria-label="Wiki">
+                <img src="/assets/images/robots/laser_r.png" alt="Wiki" style="height: 1.5em; width: auto;" />
               </a>
             </li>
           </ul>
@@ -354,5 +442,24 @@
 </footer>
 
   <script src="/assets/js/content_switch.js"></script>
+  <script>
+    (function() {
+      function setNavHeaderHeightVar() {
+        var nav = document.querySelector('.navbar.fixed-top');
+        if (!nav) return;
+        var h = nav.offsetHeight;
+        var collapse = nav.querySelector('.navbar-collapse');
+        if (collapse && collapse.classList.contains('show')) {
+          // Subtract the open collapse height so padding reflects only the header
+          h -= collapse.offsetHeight;
+        }
+        document.documentElement.style.setProperty('--nav-h', h + 'px');
+      }
+      window.addEventListener('load', setNavHeaderHeightVar);
+      window.addEventListener('resize', setNavHeaderHeightVar);
+      document.addEventListener('shown.bs.collapse', setNavHeaderHeightVar);
+      document.addEventListener('hidden.bs.collapse', setNavHeaderHeightVar);
+    })();
+  </script>
   </body>
 </html>

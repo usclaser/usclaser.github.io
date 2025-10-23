@@ -4,13 +4,13 @@ permalink: /robots/
 title: Robots
 ---
 
-<div class="col-12 col-lg-10 mx-auto">
+<div class="col-12 col-lg-10 mx-auto robots-page">
   <h2>Robots</h2>
   {% assign robots = site.robots | sort: 'order' %}
   {% if robots and robots.size > 0 %}
     <div class="row g-4 mt-2 justify-content-center">
       {% for r in robots %}
-        <div class="col-12 col-sm-6">
+        <div class="col-12 col-sm-6 robot-col">
           <div class="card h-100 robot-card">
             {% assign img = r.image | default: '/assets/images/robots/laser_r.png' %}
             <img class="card-img-top" src="{{ img | relative_url }}" alt="{{ r.name | default: r.title }}" />
