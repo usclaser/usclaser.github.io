@@ -15,7 +15,7 @@ We are always excited to have motivated researchers join our group:
 1. Please indicate your interest on your application materials. Submit an official application to [USC Viterbi's Ph.D. program](https://viterbigradadmission.usc.edu/doctoral/how-to-apply-phd/) (ASTE/AME/ECE) by Dec-15 for fall admissions.
 2. Make sure you select Prof. Albee as a faculty member of interest.
 3. If you would like to email Prof. Albee directly, please send your CV and unofficial transcript with a brief description of your specific interest in the lab with subject line `[LASER-APPLY]`.
-- Interviews begin in Dec/Jan, and USC fellowships recommendations are made by ~Feb, followed by RA offers in ~Mar.
+- Interviews begin in Dec/Jan, and USC fellowship recommendations are made by ~Feb, followed by RA offers in ~Mar.
 - Spring admissions are rare, but possible. Contact Prof. Albee if you have a special circumstance.
 - For current USC Ph.D. students @ USC: please send the above materials using subject line `[LASER-APPLY]`.
 
