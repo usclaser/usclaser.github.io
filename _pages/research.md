@@ -4,46 +4,52 @@ permalink: /research/
 title: Research
 projects:
   - slug: rattle
-    title: Robust model improvement for on-orbit robots (RATTLE)
-    image: /assets/images/publications/2022_ral.png
+    title: Learning-Augmented Planning and Control
+    image: /assets/images/rend.gif
     description: >-
-      RATTLE develops a motion planning algorithm that improves parametric models online,
-      using real robot data to reduce uncertainty and increase robustness during
-      close-proximity operations.
+      Infusing learning-based tools into planning and control to improve efficiency and safety under imperfect knowledge.
   - slug: lunar-leader
-    title: Persistent leader election for multi-robot exploration (Lunar Leader)
-    image: /assets/images/publications/2024_aamas.png
+    title: Safe and Robust Planning
+    image: /assets/images/inspection.png
     description: >-
-      A distributed algorithm for electing a leader that persists under communication
-      dropouts and dynamics, enabling coordinated behaviors in challenging environments.
+      Providing or enhancing safety guarantees for uncertain dynamical systems, including when new information is revealed online.
   - slug: microgravity-cd
-    title: Change detection in microgravity (AstrobeeCD)
-    image: /assets/images/publications/2024_acta.png
+    title: Information- and Perception-Aware Autonomy
+    image: /assets/images/explore.gif
     description: >-
-      Perception-informed autonomy to detect environmental changes for free-flying
-      robots, enabling safer and more reliable task execution on-orbit.
+      Considering perception, localization, and information gain explicitly in robotic planning.
+  - slug: microgravity-cd
+    title: Extreme Environment and Space Systems
+    image: /assets/images/robots/wally.png
+    description: >-
+      Autonomy frameworks incorporating the above topic areas for exploration, space, and other extreme environment robotics applications. We are always looking for new, dynamically interesting robotic systems that invite creative algorithmic solutions.
 ---
 
 ## Research
 
-Increasingly capable algorithms are required to continue taking dynamic mobile robots out of the lab and into the field. Operating under challenging conditions with real-world constraints, these robots face situations that are **uncertain**, **unknown**, or **unstructured** with limitations in perception, real-time demands on compute, and often with complex or stochastic dynamics.
+Increasingly capable algorithms are required to take dynamic mobile robots out of the lab and into the field. Operating under challenging conditions with real-world constraints, these robots face situations that are **uncertain**, **unknown**, or **unstructured** with limitations in perception, real-time demands on compute, and often with complex or stochastic dynamics.
 
-LASER develops methods for adaptive decision-making under uncertainty for these systems, drawing from *control theory*, *reinforcement learning*, and *stochastic modeling*, with an emphasis on a "theory to practice” philosophy including field hardware validation: our work has flown on the International Space Station and, in the coming months, to the Moon. Our overarching goal is to make autonomous robotic operations safer and more efficient when human-in-the-loop operation becomes infeasible, risky, or wasteful. To this end, some of our current research areas include:
+LASER develops methods for adaptive decision-making under uncertainty for these systems, drawing from *control theory*, *reinforcement learning*, and *stochastic modeling*, with an emphasis on a "theory to practice” philosophy including field hardware validation: our work has flown on the International Space Station and, in the coming months, to the Moon. Our overarching goal is to make autonomous robotic operations safer and more efficient when human-in-the-loop operation becomes infeasible, risky, or wasteful.
 
-- Infusing learning-based tools into planning and control to improve efficiency and safety under imperfect knowledge.
-- Providing or enhancing safety guarantees for uncertain dynamical systems, including when new information is revealed online.
-- Considering perception, localization, and information gain explicitly in robotic planning.
-- Autonomy frameworks incorporating the above for exploration, space, and other extreme environment robotics applications.
+## Active Topic Areas
 <!-- Display projects-->
 <div class="row pt-2">
   {% assign projs = page.projects %}
   {% for p in projs %}
-    <div class="row">
-      <hr />
-    </div>
+    <div class="row"><hr /></div>
     <div class="row justify-content-center py-3" id="{{ p.slug }}">
       <div class="col-8 col-md-4 align-items-center my-auto py-3">
-        <img class="img-fluid" src="{{ p.image | relative_url }}" alt="{{ p.title }}" />
+        {% if p.video %}
+          <video style="width:100%; height:auto; display:block;" controls preload="metadata" playsinline poster="{{ p.image | relative_url }}">
+            <source src="{{ p.video | relative_url }}" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p class="small mt-2 mb-0">
+            Having trouble? <a href="{{ p.video | relative_url }}" target="_blank" rel="noopener">Open video in a new tab</a>
+          </p>
+        {% else %}
+          <img class="img-fluid" src="{{ p.image | relative_url }}" alt="{{ p.title }}" />
+        {% endif %}
       </div>
       <div class="col-10 col-md-8 my-auto">
         <p><b>{{ p.title }}</b></p>

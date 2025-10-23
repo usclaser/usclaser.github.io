@@ -9,7 +9,7 @@ hero_image: /assets/images/splash.png
 <div class="col-12 col-lg-10 mx-auto">
         <div class="row my-4">
             <div class="col-12 section-veil">
-                        <div id="projectCarousel" class="carousel slide mx-auto" data-bs-ride="carousel" data-bs-interval="8000">
+                        <div id="projectCarousel" class="carousel slide mx-auto" data-bs-ride="carousel" data-bs-interval="5000">
                             <div class="carousel-indicators">
                                 {% assign research_page = site.pages | where: 'title', 'Research' | first %}
                                 {% assign projs = research_page.projects %}
@@ -49,13 +49,17 @@ hero_image: /assets/images/splash.png
         <div class="row align-items-start g-4">
           <div class="col-12 col-lg-6">
             <h2>Contact</h2>
-            <p>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-            <p>USC Viterbi School of Engineering, Los Angeles, CA</p>
+            <p>Laboratory for Autonomous Systems in Exploration and Robotics<br>
+               Viterbi School of Engineering<br>
+               Univerity of Southern California<br>
+               Ronald Tutor Hall 305<br>
+               3710 McClintock Ave<br>
+               Los Angeles, CA 90089</p>
           </div>
           <div class="col-12 col-lg-6">
             <div class="ratio ratio-16x9">
               <iframe
-                src="https://www.google.com/maps?q=USC%20Viterbi%20School%20of%20Engineering&output=embed"
+                src="https://www.google.com/maps?q=USC%20Ronald%20Tutor%20Hall%20RTH%&output=embed"
                 style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>

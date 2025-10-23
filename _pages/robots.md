@@ -12,7 +12,7 @@ title: Robots
       {% for r in robots %}
         <div class="col-12 col-sm-6">
           <div class="card h-100 robot-card">
-            {% assign img = r.image | default: '/assets/images/robots/placeholder.png' %}
+            {% assign img = r.image | default: '/assets/images/robots/laser_r.png' %}
             <img class="card-img-top" src="{{ img | relative_url }}" alt="{{ r.name | default: r.title }}" />
             <div class="card-body">
               <h5 class="card-title">{{ r.name | default: r.title }}</h5>

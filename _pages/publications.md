@@ -6,7 +6,7 @@ title: Publications
 
 ## Publications
 <p>
-  You can also find the latest work on <a href="https://scholar.google.com/citations?user=msRla_0AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.
+  Selected publications are available here. You can also find the latest work on <a href="https://scholar.google.com/citations?user=msRla_0AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.
 </p>
 
 <div class="col-12 col-lg-10 publications-page">

@@ -130,6 +130,16 @@ body { padding-top: var(--nav-offset); }
   margin: 0 auto;
 }
 
+/* Robots page: crop images to square */
+.robot-card .card-img-top {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+.robot-item img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
 /* Homepage hero background support */
 .site-hero {
   min-height: 320px;
@@ -167,13 +177,8 @@ body { padding-top: var(--nav-offset); }
 
 /* Carousel overlays: light image veil, dark buttons, dark caption */
 .carousel-image-wrapper { position: relative; }
-.carousel-image-wrapper::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.15); /* light opacity over images */
-  pointer-events: none;
-}
+/* Remove light overlay from carousel images */
+.carousel-image-wrapper::before { content: none !important; background: none !important; }
 /* Darken carousel controls */
 .carousel-control-prev, .carousel-control-next {
   background: rgba(0, 0, 0, 0.35);
@@ -235,3 +240,25 @@ footer a, .site-footer a { transition: color 60ms ease-in, text-decoration-color
 }
 .publications-page a::after,
 .publications-page h4 a::after { display: none !important; content: none !important; }
+
+/* Make PI images a bit smaller on desktop */
+.pi-figure img {
+  display: block;
+  margin: 0 auto 1rem auto;
+  max-width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+@media (max-width: 576px) {
+  .pi-figure img { max-width: 100%; }
+}
+
+/* People page: force person images to be square-cropped */
+.people-page .card .card-img-top {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+.people-page .pi-figure img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}

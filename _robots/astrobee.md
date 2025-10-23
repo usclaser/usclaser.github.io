@@ -1,6 +1,6 @@
 ---
 name: Astrobee
-image: /assets/images/robots/laser_r.png
+image: /assets/images/robots/astrobee.png
 order: 1
 ---
-Short description of the Astrobee free-flying robot.
+Robotic microgravity free-flyers aboard the International Space Station. LASER has extensively tested our online learning and rendezvous algorithms on Astrobee.
