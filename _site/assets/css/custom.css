@@ -139,7 +139,7 @@ body { padding-top: var(--nav-offset); }
   margin: 0 auto;
 }
 
-li, 
+/* markdown stuff*/
 li p, 
 li a, 
 li code, 
@@ -147,6 +147,13 @@ li strong,
 li em {
   color: inherit;
   background-color: inherit;
+}
+
+ol, ul, li {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: normal;
+  margin-left: 0.7rem;         /* avoid double indent */
 }
 
 :not(li) > code,
@@ -273,13 +280,24 @@ footer a, .site-footer a { transition: color 60ms ease-in, text-decoration-color
 .full-bleed-band {
   background: #ffcc00ff;
   color: #212529;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  width: 100vw;
-  padding: 2rem 0;
+  width: 102dvw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-size: cover;        /* stretch and crop as needed */
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem 0;     
+
+}
+
+.contact {
+  padding: 2rem;               /* small horizontal padding for mobile */
+  box-sizing: border-box;
+}
+
+.join {
+  padding: 2rem;               /* small horizontal padding for mobile */
+  box-sizing: border-box;
 }
 
 /* Publications page: force-remove all link underlines/effects */

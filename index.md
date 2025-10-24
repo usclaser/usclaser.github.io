@@ -45,9 +45,9 @@ hero_image: /assets/images/splash.png
 <div class="row mt-5">
   <div class="col-12 p-0">
     <section class="full-bleed-band">
-      <div class="container">
-        <div class="row align-items-start g-4">
-          <div class="col-12 col-lg-6">
+      <div class="container contact">
+        <div class="row align-items-start g-4 conact">
+          <div class="col-12 col-lg-6 contact">
             <h2>Contact</h2>
             <p>Laboratory for Autonomous Systems in Exploration and Robotics<br>
                Viterbi School of Engineering<br>
