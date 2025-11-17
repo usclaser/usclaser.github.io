@@ -18,8 +18,16 @@ layout: default
 </style>
 
 <div class="container">
-  <h1>404</h1>
+  <h1>Page not found</h1>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <p><strong>We couldn't find that page.</strong></p>
+  <p>Here are some helpful links instead:</p>
+  <p>
+    <a href="{{ '/' | relative_url }}">Home</a> ·
+    <a href="{{ '/people/' | relative_url }}">People</a> ·
+    <a href="{{ '/research/' | relative_url }}">Research</a> ·
+    <a href="{{ '/publications/' | relative_url }}">Publications</a> ·
+    <a href="{{ '/robots/' | relative_url }}">Robots</a> ·
+    <a href="{{ '/join/' | relative_url }}">Join</a>
+  </p>
 </div>

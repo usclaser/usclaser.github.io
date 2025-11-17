@@ -2,6 +2,7 @@
 layout: default
 permalink: /join/
 title: Join
+description: "Join USC LASER at the University of Southern California. We recruit Ph.D., M.S., and undergraduate researchers in robotics and autonomy (AME/ASTE/ECE)."
 ---
 
 ## Join LASER

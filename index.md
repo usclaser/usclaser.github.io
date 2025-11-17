@@ -4,6 +4,7 @@ layout: default
 classes: wide
 permalink: "/"
 hero_image: /assets/images/splash.png
+description: "USC LASER — Laboratory for Autonomous Systems in Exploration and Robotics at the University of Southern California. Research in robotics and autonomy within USC RASC and Viterbi (AME/ASTE/ECE)."
 ---
 
 <div class="col-12 col-lg-10 mx-auto">
@@ -21,7 +22,7 @@ hero_image: /assets/images/splash.png
                         {% for p in projs %}
                             <div class="carousel-item {% if forloop.first %}active{% endif %}">
                                         <a href="{{ '/research/' | relative_url }}#{{ p.slug }}" class="d-flex justify-content-center align-items-center carousel-image-wrapper">
-                                            <img src="{{ p.image | relative_url }}" class="img-fluid" alt="{{ p.title }}">
+                                            <img src="{{ p.image | relative_url }}" class="img-fluid" alt="{{ p.title }} — USC LASER research area">
                                     <div class="carousel-caption d-none d-md-block">
                                         <h5>{{ p.title }}</h5>
                                     </div>

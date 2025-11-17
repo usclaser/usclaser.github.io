@@ -1,13 +1,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
+<meta name="author" content="USC LASER">
 
-<!-- Use laser_r as the favicon -->
-<link rel="icon" type="image/png" href="{{ '/assets/images/laser_r.png' | relative_url }}">
-<link rel="shortcut icon" type="image/png" href="{{ '/assets/images/laser_r.png' | relative_url }}">
+{% if site.keywords %}
+  <meta name="keywords" content="{{ site.keywords | join: ', ' }}">
+{% endif %}
 
-<title>{{ site.title }}</title>
+<link rel="icon" type="image/png" href="{{ "/assets/images/favicon.png" | relative_url }}">
+
+<title>{% if page.title and page.title != 'Home' %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+{% seo %}
 
 <!-- Bootstrap core CSS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -30,3 +33,18 @@
 <style>
   :root { --hero-splash-bg: {{ page.hero_color | default: site.hero_color | default: '#ffffff' }}; }
 </style>
+
+{%- assign org = site.organization -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Organization", "ResearchOrganization"],
+  "name": {{ org.name | default: site.title | jsonify }},
+  "url": {{ org.url | default: site.url | jsonify }},
+  "logo": {{ org.logo | default: site.logo | jsonify }},
+  "email": {{ site.email | jsonify }},
+  "parentOrganization": {{ org.parentOrganization | jsonify }},
+  "sameAs": {{ org.sameAs | jsonify }}{% if org.address %},
+  "address": {{ org.address | jsonify }}{% endif %}
+}
+</script>

@@ -2,6 +2,7 @@
 layout: default
 permalink: /robots/
 title: Robots
+description: "Robotic platforms at USC LASER supporting research in autonomy for field, space, and extreme environments at USC (RASC, AME/ASTE/ECE)."
 ---
 
 <div class="col-12 col-lg-10 mx-auto robots-page">

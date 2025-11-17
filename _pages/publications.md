@@ -2,6 +2,7 @@
 layout: default
 permalink: /publications/
 title: Publications
+description: "Publications from USC LASER on robotics, autonomy, planning and control, and more. University of Southern California, Viterbi School of Engineering."
 ---
 
 ## Publications

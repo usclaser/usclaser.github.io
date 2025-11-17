@@ -2,6 +2,7 @@
 layout: default
 permalink: /news/
 title: News
+description: "Updates from USC LASER — Laboratory for Autonomous Systems in Exploration and Robotics at USC Viterbi. Recruiting, awards, and research highlights."
 ---
 
 <div class="col-12 col-lg-9">

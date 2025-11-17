@@ -2,6 +2,7 @@
 layout: default
 permalink: /people/
 title: People
+description: "Meet USC LASER — faculty, students at the University of Southern California (RASC, AME/ASTE/ECE)."
 ---
 
 <div class="col-12 col-lg-10 people-page">

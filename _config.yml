@@ -1,26 +1,81 @@
 include: ["_pages"]
 
-title: LASER
+title: "USC LASER — Laboratory for Autonomous Systems in Exploration and Robotics"
 email: kalbee@usc.edu
-desicption: USC LASER website
-description: USC LASER website
+description: "USC LASER: Robotics and autonomy research at the University of Southern California; part of USC RASC; affiliated with AME, ASTE, and ECE."
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://usclaser.github.io"
+url: "https://usclaser.github.io" # Update if/when using a custom domain
+lang: en
+
+favicon: /assets/images/favicon.png
+logo: /assets/images/laser_no_back.png
+image: /assets/images/splash.png
 
 # Build settings
 baseurl: ""
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 masthead_title: "USC LASER"
+
+twitter:
+  username: usclaser
+  card: summary_large_image
+
+social:
+  name: USC LASER
+  links:
+    - https://github.com/usclaser
+
+keywords:
+  - USC
+  - University of Southern California
+  - LASER
+  - Laboratory for Autonomous Systems in Exploration and Robotics
+  - robotics
+  - autonomy
+  - autonomous systems
+  - artificial intelligence
+  - AI
+  - planning and control
+  - perception-aware planning
+  - USC RASC
+  - AME
+  - ASTE
+  - ECE
+  - Viterbi School of Engineering
+
+organization:
+  name: "USC LASER — Laboratory for Autonomous Systems in Exploration and Robotics"
+  legalName: "Laboratory for Autonomous Systems in Exploration and Robotics"
+  parentOrganization: "University of Southern California"
+  url: "https://usclaser.github.io"
+  logo: "/assets/images/laser_no_back.png"
+  sameAs:
+    - https://www.usc.edu/
+    - https://viterbischool.usc.edu/
+    - https://rasc.usc.edu/
+    - https://ame.usc.edu/
+    - https://aste.usc.edu/
+    - https://minghsiehece.usc.edu/
+    - https://github.com/usclaser
+  address:
+    streetAddress: 3710 McClintock Ave, Ronald Tutor Hall 305
+    addressLocality: Los Angeles
+    addressRegion: CA
+    postalCode: 90089
+    addressCountry: US
 
 sass:
   load_paths:
     - node_modules
 
 defaults:
-    values:
-      custom_stylesheet: assets/css/custom.css
+  values:
+    custom_stylesheet: assets/css/custom.css
+    image: /assets/images/splash.png
 
 # Collections
 collections:

@@ -2,6 +2,7 @@
 layout: default
 permalink: /research/
 title: Research
+description: "USC LASER research in robotic autonomy; USC Viterbi (RASC, AME/ASTE/ECE)."
 projects:
   - slug: rattle
     title: Learning-Augmented Planning and Control
