@@ -1,33 +1,24 @@
 ---
-permalink: /404.html
 layout: default
+title: Page not found
+permalink: /404.html
+description: We couldn't find that page.
+robots: noindex
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<div class="container">
-  <h1>Page not found</h1>
-
-  <p><strong>We couldn't find that page.</strong></p>
-  <p>Here are some helpful links instead:</p>
-  <p>
-    <a href="{{ '/' | relative_url }}">Home</a> ·
-    <a href="{{ '/people/' | relative_url }}">People</a> ·
-    <a href="{{ '/research/' | relative_url }}">Research</a> ·
-    <a href="{{ '/publications/' | relative_url }}">Publications</a> ·
-    <a href="{{ '/robots/' | relative_url }}">Robots</a> ·
-    <a href="{{ '/join/' | relative_url }}">Join</a>
-  </p>
-</div>
+<main class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8 text-center">
+      <h1 class="display-5">Page not found</h1>
+      <p class="lead">We couldn't find that page. Try one of these links instead:</p>
+      <p>
+        <a href="/">Home</a> ·
+        <a href="/people/">People</a> ·
+        <a href="/research/">Research</a> ·
+        <a href="/publications/">Publications</a> ·
+        <a href="/robots/">Robots</a> ·
+        <a href="/join/">Join</a>
+      </p>
+    </div>
+  </div>
+</main>
