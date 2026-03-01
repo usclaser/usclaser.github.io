@@ -1,0 +1,11 @@
+---
+title: "CRESCENT: Collision-Free Highly Constrained Trajectory Optimization for Driving on the Moon"
+authors: "Abhishek Cauligi*, Keenan Albee*, Jean-Pierre de la Croix, and Roland Brockers"
+journal: "IEEE Transactions on Field Robotics"
+year: 2025
+collection: publications
+image: "/assets/images/publications/2025_tfr.png"
+# below are used if they exist
+link: "https://doi.org/10.1109/TFR.2025.3639455"
+doi: "10.1109/TFR.2025.3639455"
+---
