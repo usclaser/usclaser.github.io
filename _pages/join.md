@@ -7,7 +7,7 @@ description: "Join USC LASER at the University of Southern California. We recrui
 
 ## Join LASER
 
-We appreciate your interest in the lab! If you research interests align with the group please get in touch (current emphasis on RL/MPC, perception-aware planning, mechanical design/hardware). We are currently recruiting a very limited number of Ph.D. students (fall 2027), and research-based M.S. students on a rolling basis. We are an interdisciplinary team, and motivated students with backgrounds in robotics, aerospace/mechanical engineering, computer science, controls, and related fields are encouraged to apply.
+We appreciate your interest in the lab! If your research interests align with the group please get in touch (current emphasis on RL/MPC, perception-aware planning, mechanical design/hardware). We are currently recruiting a very limited number of Ph.D. students (fall 2027), and research-based M.S. students on a rolling basis. We are an interdisciplinary team, and motivated students with backgrounds in robotics, aerospace/mechanical engineering, computer science, controls, and related fields are encouraged to apply.
 
 
 ### Prospective Ph.D. Students
