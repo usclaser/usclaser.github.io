@@ -7,5 +7,5 @@ order: 1
 category: alumni
 ---
 
-University of Southern California
+USC
 <!-- Design optimization, robotic mechanical design, motion planning. -->

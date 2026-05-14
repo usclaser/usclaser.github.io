@@ -6,4 +6,4 @@ order: 1
 category: alumni
 ---
 
-ETH Zürich
+ETH Zürich → Skydio

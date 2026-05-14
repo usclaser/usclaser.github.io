@@ -4,7 +4,9 @@ role: M.S. Student
 website: https://viterbi.usc.edu
 image: assets/images/people/sarkis_gafafyan.jpeg
 order: 1
-category: team
+category: alumni
 ---
 
-Robotics software/avionics.
+USC
+
+<!-- Robotics software/avionics. -->

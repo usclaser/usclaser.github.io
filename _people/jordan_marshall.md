@@ -4,7 +4,9 @@ role: M.S. Student
 website: https://viterbi.usc.edu
 image: /assets/images/people/jordan_marshall.jpg
 order: 1
-category: team
+category: alumni
 ---
 
-Autonomous on-orbit inspection.
+USC → Scout Space
+
+<!-- Autonomous on-orbit inspection. -->

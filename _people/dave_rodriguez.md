@@ -4,7 +4,9 @@ role: B.S. Student
 website: https://viterbi.usc.edu
 image: 
 order: 1
-category: team
+category: alumni
 ---
 
-Microgravity robotics facility, avionics.
+USC
+
+<!-- Microgravity robotics facility, avionics. -->

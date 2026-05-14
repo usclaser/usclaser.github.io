@@ -4,7 +4,9 @@ role: B.S. Student
 website: https://viterbi.usc.edu
 image: 
 order: 1
-category: team
+category: alumni
 ---
 
-Novel locomotion concepts, fluid structure interaction.
+USC
+
+<!-- Novel locomotion concepts, fluid structure interaction. -->
