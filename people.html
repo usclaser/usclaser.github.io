@@ -1,0 +1,40 @@
+---
+layout: default
+title: People
+permalink: /people/
+---
+
+{% assign current_people = site.people | where: "status", "current" %}
+{% assign alum_people = site.people | where: "status", "alum" %}
+
+<h2>Current Members</h2>
+<div class="row">
+  {% for person in current_people %}
+    <div class="col-md-4">
+      <div class="card">
+        <img src="{{ person.image | relative_url }}" class="card-img-top" alt="{{ person.name }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ person.name }}</h5>
+          <p class="card-text">{{ person.bio }}</p>
+          <a href="{{ person.url | relative_url }}" class="btn btn-primary">View Profile</a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<h2>Alumni</h2>
+<div class="row">
+  {% for person in alum_people %}
+    <div class="col-md-4">
+      <div class="card">
+        <img src="{{ person.image | relative_url }}" class="card-img-top" alt="{{ person.name }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ person.name }}</h5>
+          <p class="card-text">{{ person.bio }}</p>
+          <a href="{{ person.url | relative_url }}" class="btn btn-primary">View Profile</a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

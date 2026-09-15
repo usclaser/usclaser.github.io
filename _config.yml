@@ -76,7 +76,7 @@ defaults:
   values:
     custom_stylesheet: assets/css/custom.css
     image: /assets/images/splash.png
-
+    
 # Collections
 collections:
   publications:
