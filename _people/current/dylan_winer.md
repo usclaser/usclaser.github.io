@@ -1,8 +1,8 @@
 ---
-name: Nathan Chun
+name: Dylan Winer
 role: Ph.D. Student
 website: https://viterbi.usc.edu
-image: 
+image: /assets/images/people/dylan_winer.jpg
 order: 1
 category: team
 ---
