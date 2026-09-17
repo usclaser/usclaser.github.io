@@ -4,7 +4,7 @@ role: Ph.D. Student
 website: https://viterbi.usc.edu
 image: /assets/images/people/moises_mata.jpg
 order: 1
-category: team
+category: phd
 ---
 
 Heterogeneous and capability-aware planning.

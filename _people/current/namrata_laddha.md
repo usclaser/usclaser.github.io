@@ -4,7 +4,7 @@ role: M.S. Student
 website: https://viterbi.usc.edu
 image: 
 order: 1
-category: team
+category: ms
 ---
 
 Robotics mechanical and electrical design.

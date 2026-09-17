@@ -10,7 +10,7 @@ description: "Meet USC LASER — faculty, students at the University of Southern
   {% assign members = site.people | sort: 'order' %}
 
   {% assign pi = members | where_exp: 'p', 'p.group == "pi" or p.category == "pi"' %}
-  {% assign team = members | where_exp: 'p', 'p.group == "team" or p.category == "team"' %}
+  {% assign team = members | where_exp: 'p', 'p.group == "team" or p.category == "team" or p.category == "phd" or p.category == "ms" or p.category == "bs"' %}
   {% assign alumni = members | where_exp: 'p', 'p.group == "alumni" or p.category == "alumni"' %}
 
   {% if pi and pi.size > 0 %}
@@ -39,8 +39,37 @@ description: "Meet USC LASER — faculty, students at the University of Southern
 
   {% if team and team.size > 0 %}
     <h3 class="mt-4">Team</h3>
+    {% assign phd_students = team | where: 'category', 'phd' %}
+    {% assign ms_students = team | where: 'category', 'ms' %}
+    {% assign undergrad_students = team | where: 'category', 'bs' %}
     <div class="row g-4">
-      {% for p in team %}
+      {% for p in phd_students %}
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card h-100">
+            {% assign img = p.image | default: '/assets/images/robots/laser_r.png' %}
+            <img class="card-img-top" src="{{ img | relative_url }}" alt="{{ p.name | default: p.title }}" />
+            <div class="card-body">
+              <h5 class="card-title mb-1">{{ p.name | default: p.title }}</h5>
+              {% if p.role %}<div class="text-muted small mb-2">{{ p.role }}</div>{% endif %}
+              <div class="card-text">{{ p.content | markdownify }}</div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      {% for p in ms_students %}
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card h-100">
+            {% assign img = p.image | default: '/assets/images/robots/laser_r.png' %}
+            <img class="card-img-top" src="{{ img | relative_url }}" alt="{{ p.name | default: p.title }}" />
+            <div class="card-body">
+              <h5 class="card-title mb-1">{{ p.name | default: p.title }}</h5>
+              {% if p.role %}<div class="text-muted small mb-2">{{ p.role }}</div>{% endif %}
+              <div class="card-text">{{ p.content | markdownify }}</div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      {% for p in undergrad_students %}
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="card h-100">
             {% assign img = p.image | default: '/assets/images/robots/laser_r.png' %}
