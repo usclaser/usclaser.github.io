@@ -1,7 +1,6 @@
 ---
 name: Elsa Forberger
 role: Ph.D. Student
-website: https://viterbi.usc.edu
 image: /assets/images/people/elsa_forberger.jpeg
 order: 1
 category: phd

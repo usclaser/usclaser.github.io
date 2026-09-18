@@ -47,7 +47,7 @@ description: "Meet USC LASER — faculty, students at the University of Southern
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="card h-100">
             {% assign img = p.image | default: '/assets/images/robots/laser_r.png' %}
-            {% if p.website and p.website != 'https://viterbi.usc.edu' %}
+            {% if p.website %}
               <a href="{{ p.website }}">
                 <img class="card-img-top" src="{{ img | relative_url }}" alt="{{ p.name | default: p.title }}" />
               </a>
@@ -66,7 +66,7 @@ description: "Meet USC LASER — faculty, students at the University of Southern
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="card h-100">
             {% assign img = p.image | default: '/assets/images/robots/laser_r.png' %}
-            {% if p.website and p.website != 'https://viterbi.usc.edu' %}
+            {% if p.website %}
               <a href="{{ p.website }}">
                 <img class="card-img-top" src="{{ img | relative_url }}" alt="{{ p.name | default: p.title }}" />
               </a>
@@ -85,7 +85,7 @@ description: "Meet USC LASER — faculty, students at the University of Southern
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="card h-100">
             {% assign img = p.image | default: '/assets/images/robots/laser_r.png' %}
-            {% if p.website and p.website != 'https://viterbi.usc.edu' %}
+            {% if p.website %}
               <a href="{{ p.website }}">
                 <img class="card-img-top" src="{{ img | relative_url }}" alt="{{ p.name | default: p.title }}" />
               </a>
